@@ -1,0 +1,35 @@
+<!--layout.html是公用的模板，可以使用继承-->
+{% extends 'layout.html' %}
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/admin">管理首页</a></li>
+    <li><a href="#">用户列表</a></li>
+    <!--<li class="active">Data</li>-->
+</ol>
+<h3>用户列表</h3>
+<table class="table table-hover table-bordered table-striped">
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>管理员</th>
+    </tr>
+
+    {% for item in users%}
+    <tr>
+        <td>{{item._id.toString()}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.password}}</td>
+        {% if item.isAdmin%}
+        <td>是</td>
+        {% else %}
+        <td>否</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+<!--分页功能在page.html中，因为很多地方都会用到，所以封装成模板，调用即可-->
+{% include 'page.html' %}
+{% endblock%}
+

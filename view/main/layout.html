@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/register.js"></script>
+    <title>破梨博客</title>
+</head>
+<body>
+<header></header>
+<nav>
+    <ul>
+        <!--通过检查是否存在category来决定是否存在active类-->
+        {% if category=='' %}
+        <li class="active"><a href="/">首页</a></li>
+        {% else %}
+        <li ><a href="/">首页</a></li>
+        {% endif %}
+        {% for item in navinfo %}
+        <!--如果此时的分类id与用户点击的相同 则active-->
+        {% if item._id.toString() == category %}
+        <li class="active"><a href="/?category={{item._id.toString()}}" style="text-decoration: none;color: black">{{item.name}}</a></li>
+        {% else %}
+        <li><a href="/?category={{item._id.toString()}}" style="text-decoration: none;color: black">{{item.name}}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
+<div class="main">
+    {% block content%}
+    {% endblock %}
+
+    <!--/* 模板的语法*/-->
+    {% if userinfo.username %}
+    <div class="userinfo">
+        <div class="title">用户信息</div>
+        <p id="user">{{userinfo.username}}</p>
+        {% if userinfo.isAdmin %}
+        <span class="info">你好，你是管理员</span>
+        <span><a href="/admin" target="_blank">你点击这里进入管理</a></span>
+        {% else %}
+        <span class="info">你好，欢迎光临破梨博客</span>
+        {% endif %}
+        <p><a href="javascript:;" id="logout">退出</a></p>
+    </div>
+
+    {% else %}
+    <div class="login">
+        <div class="title">登录</div>
+        <div class="user">
+            <span>用户名:</span>
+            <input type="text" name="username">
+        </div>
+        <div class="password">
+            <span>密码:</span>
+            <input type="password" name="password" >
+        </div>
+        <button>登录</button>
+        <div>
+            <span>还没注册？</span><span><a href="javascript:;" id="register">马上注册</a></span>
+        </div>
+        <div><span></span></div>
+    </div>
+
+    <div class="register">
+        <div class="title">注册</div>
+        <div class="user">
+            <span>用户名:</span>
+            <input type="text" name="username">
+        </div>
+        <div class="password">
+            <span>密码:</span>
+            <input type="password" name="password" >
+        </div>
+        <div class="password">
+            <span>确认:</span>
+            <input type="password" name="repassword" >
+        </div>
+        <button>注册</button>
+        <div>
+            <span></span>
+        </div>
+        <div>
+            <span>已有账号？</span><span><a href="javascript:;" id="login">马上登录</a></span>
+        </div>
+    </div>
+    {% endif%}
+
+    <div class="community">
+        <div class="title">社区</div>
+        <p><a href="">课堂</a></p>
+        <p><a href="">茶馆</a></p>
+    </div>
+</div>
+</body>
+</html>

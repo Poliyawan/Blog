@@ -1,0 +1,337 @@
+body{
+	padding: 0;
+	margin: 0;
+	width: 1920px;
+	height: 1080px;
+	background: #eee;
+	font-family: '微软雅黑';
+}
+
+header{
+	width: 100%;
+	height: 120px;
+	background: url('../images/bg.jpg');
+	background-size: 100% 100%;
+}
+nav{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+}
+nav ul{
+	width: 1000px;
+	margin: 0 auto;
+	/*left:;*/
+}
+nav ul li{
+	list-style: none;
+		float: left;
+		line-height: 50px;
+	margin-left: 10px;
+	/*background: red;*/
+	/*border: */
+	width: 100px;
+	text-align: center;
+	color: blue;
+}
+
+nav ul li:hover{
+	border-bottom: 3px solid orange;
+	color: pink;
+
+}
+
+.active{
+	border-bottom: 3px solid orange;
+	color: pink;
+}
+
+.main{
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 100%;
+	/*text-align: right;*/
+	/*background: red;*/
+}
+
+.content{
+	/*position: relative;*/
+	width: 700px;
+	height: 250px;
+	background: white;
+	margin-top: 40px;
+}
+
+.page{
+	width: 700px;
+	height: 50px;
+	margin-top: 40px;
+	background: white;
+}
+
+.page span{
+	display: inline-block;
+}
+
+.page span:first-child{
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+.page span:nth-child(2){
+	margin-left: 250px;
+	/*width: 100px;*/
+}
+
+.page span:nth-child(3){
+	margin-left: 250px;
+}
+
+.content h2{
+	margin: 0 auto;
+	text-align: center;
+	/*width: 50px;*/
+	/*position: absolute;*/
+	/*left:;*/
+	/*top:20px;*/
+	padding: 30px 0 20px 0;
+}
+
+.content div{
+	/*width: 400px;*/
+	text-align: center;
+	margin: 0 auto;
+}
+
+.content div span:nth-child(even) {
+	color: blue;
+}
+
+.content p{
+	margin:  20px 0 0 40px ;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.content button{
+	width: 130px;
+	height: 35px; 
+	margin:  40px 0 0 40px ;
+	background: orange;
+	outline: none;
+	border: 1px solid orange;
+	border-radius: 3px;
+	color: white;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+.userinfo{
+	position: absolute;
+	width: 450px;
+	height: 220px;
+	margin-top: 50px;
+	right: 0;
+	top:0;
+	background: white;
+	/*display: none;*/
+	/*float: right;*/
+}
+
+.login{
+	position: absolute;
+	width: 450px;
+	height: 280px;
+	background: white;
+	right: 0;
+	top: 0;
+	/*display: none;*/
+	/*float: right;*/
+
+}
+
+.register{
+	position: absolute;
+	/*margin-top: 20px;*/
+	width: 450px;
+	height: 320px;
+	right: 0px;
+	top:0px;
+	background: white;
+	display: none;
+
+	/*float: right;*/
+}
+
+.community{
+	position: absolute;
+	width: 450px;
+	height: 220px;
+	right: 0;
+	top: 340px;
+	background: white;
+}
+
+.title{
+	position: relative;
+	/*margin: 50px 100px 100px ;*/
+	top:10px;
+	left:30px;
+	width: 300px;
+	height: 40px;
+	font-size: 20px;
+	border-bottom: 1px solid orange;
+	line-height: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	/*padding: 20px*/
+}
+
+.userinfo p{
+	margin-left: 30px;
+}
+
+.userinfo p:nth-child(2){
+	margin-top: 40px;
+	font-weight: bold;
+}
+.userinfo span:nth-child(3){
+	margin-left: 30px;
+	color: orange;
+}
+
+.user {
+	margin-left: 30px;
+	margin-top:30px;
+}
+.user input{
+	height: 30px;
+	width: 230px;
+	padding: 0 5px;
+
+}
+
+.password{
+	margin-left: 45px;
+	margin-top:20px;
+}
+
+.password input{
+	height: 30px;
+	width: 230px;
+	padding: 0 5px;
+
+
+}
+
+.login button,.register button{
+	width: 230px;
+	height: 35px;
+	margin: 25px 90px 0px 90px;
+	background: orange;
+	outline: none;
+	border: 1px solid orange;
+	border-radius: 3px;
+	color: white;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+.login div:nth-child(5){
+	margin: 20px 50px 0 230px;
+}
+.register div:nth-child(6){
+	/*width:20px;*/
+	margin: 20px 28px 0 30px;
+	/*background: red;*/
+	display: inline-block;
+	color:orange;
+}
+
+.register div:nth-child(7){
+	margin: 0 20px 0 0px;
+	width:220px;
+	display: inline-block;
+
+}
+
+/*.register button{
+	width: 230px;
+	height: 35px;
+	margin: 25px 90px 0px 90px;
+	background: orange;
+	outline: none;
+	border: 1px solid orange;
+	border-radius: 3px;
+	color: white;
+	letter-spacing: 3px;
+	cursor: pointer;
+}*/
+
+.community p{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.comment{
+	width: 700px;
+	height: auto;
+	margin-top: 20px;
+	background: white;
+}
+.number{
+	position:relative;
+	height: 50px;
+	top: 20px;
+	left:40px;
+}
+
+.number span:nth-child(2){
+	position: relative;
+	left:460px;
+	letter-spacing: 2px;
+}
+
+.comment textarea{
+	position: relative;
+	left: 40px;
+	height: 60px;
+	width: 550px;
+	border: solid 1px #0e90d2;
+}
+.comment button{
+	position: relative;
+	top:-27px;
+	left:35px;
+	height: 67px;
+	width: 60px;
+	background: #0e90d2;
+	border: solid 1px #0e90d2;
+	color: white;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.comment .warning{
+	position: relative;
+	left:40px;
+	width: 615px;
+	height:35px;
+	text-align: center;
+	line-height:35px;
+	background: #da4f49;
+	color: white;
+
+}
+
+.liuyan{
+	position: relative;
+	left: 40px;
+	padding-bottom: 30px;
+}
+
+.liuyan span:nth-child(2){
+	position: relative;
+	left: 400px;
+}

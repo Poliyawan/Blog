@@ -1,0 +1,10 @@
+<!--layout.html是公用的模板，可以使用继承-->
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="jumbotron">
+    <h1>Hello, {{userinfo.username}}</h1>
+    <p>欢迎进入破梨博客后台管理</p>
+    <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>-->
+</div>
+{% endblock%}

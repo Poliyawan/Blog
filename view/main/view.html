@@ -1,0 +1,59 @@
+<!--layout.html是公用的模板，可以使用继承-->
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="content">
+    <h2>{{content.title}}</h2>
+    <div>
+        <span>作者:</span>
+        <span>{{content.user.username}}</span>
+        <span>时间:</span>
+        <span>{{content.time|date('Y.m.d H:i:s', -8*60)}}</span>
+        <span>阅读:</span>
+        <span>{{content.view}}</span>
+        <span>评论:</span>
+        <span>{{content.comments.length}}</span>
+    </div>
+    <p>{{content.content}}</p>
+</div>
+
+<div class="comment">
+    <div class="number">
+        <span style="font-weight: bold;font-size: 18px">评论</span>
+        <span>一共有<i>{{content.comments.length}}</i>条评论</span>
+    </div>
+    {% if userinfo.username %}
+    <p style="position: relative;left: 40px" id="comuser">{{userinfo.username}}</p>
+    <input type="hidden" id="contentid" value="{{content._id.toString()}}">
+    <textarea name="" id="content" cols="30" rows="3"></textarea>
+    <button id="comment">提交</button>
+    {% else %}
+    <div class="warning">
+        你还没有登录，请先登录！
+    </div>
+    {% endif %}
+    {% if content.comments.length == 0%}
+    <p style="position: relative;left: 40px;padding-bottom: 20px;">还没有留言</p>
+    {% endif%}
+    <div class="think">
+
+    </div>
+    <!--<div class="liuyan">-->
+        <!--<span>admin</span>-->
+        <!--<span>时间</span>-->
+        <!--<p>哈哈哈哈哈哈哈哈哈</p>-->
+    <!--</div>-->
+    <!--<div class="liuyan">-->
+        <!--<span>admin</span>-->
+        <!--<span>时间</span>-->
+        <!--<p>哈哈哈哈哈哈哈哈哈</p>-->
+    <!--</div>-->
+</div>
+
+<div class="page">
+    <span><a href="javascript:;" style="text-decoration: none;color: black">上一页</a></span>
+    <span></span>
+    <span><a href="javascript:;" style="text-decoration: none;color:black">下一页</a></span>
+</div>
+<script src="/public/js/comment.js"></script>
+{% endblock%}
