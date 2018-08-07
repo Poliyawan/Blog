@@ -1,9 +1,11 @@
+
 # Blog
 # 功能
   实现一个论坛的基本功能
 
 # 运行项目
   推荐使用mongodb的GUI ---> Robo 3T
+  
   连接方式：
   cmd 进入你mongodb文件下的bin目录
   cmd mongod --dbpath = 工程中db文件夹的绝对路径 --port = 27018(默认为27017)
