@@ -55,6 +55,7 @@ $(document).ready(function() {
 				username:username,
 				password:password
 			},
+			//修改处
 			success:function (data) {
 				// console.log(data);
 				$('.login div:nth-child(6) > span').html(data.message);
